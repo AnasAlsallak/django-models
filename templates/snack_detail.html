@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content%}
+  <div class="card">
+    <h1>Snack Details</h1>
+    <h2>{{ snack.name }}</h2>
+    <p>{{ snack.purchaser }}</p>
+    <p>{{ snack.desc }}</p>
+    <img src="{{ snack.image.url }}" alt="Snack image">
+  </div>
+{% endblock content%}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="snack-list">
+    <h1>Snacks List</h1>
+    <div class="snack-cards">
+      {% for snack in snacks %}
+        <div class="snack-card">
+          <div class="snack-image">
+            <img src="{{ snack.image.url }}" alt="Snack image">
+            <div class="snack-overlay">
+              <h3>{{ snack.name }}</h3>
+              <p>{{ snack.desc }}</p>
+              <a href="{% url 'snack-detail' snack.pk %}" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>  
+{% endblock content %}

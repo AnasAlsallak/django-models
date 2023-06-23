@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}"></link>
+    <title>Snacks App</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About-us</a></li>
+                <li><a href="{% url 'snack-list' %}">Snack-List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <div class="container">
+          <p>&copy; 2023 Anas Abed Alhameed. All rights reserved.</p>
+          <div class="social-media">
+            <a href="https://www.linkedin.com/in/anas-al-sallak-059430207/" target="_blank" rel="noopener noreferrer">
+              <img src="../static/Linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/AnasAlsallak" target="_blank" rel="noopener noreferrer">
+              <img src="../static/github.png" alt="GitHub">
+            </a>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
